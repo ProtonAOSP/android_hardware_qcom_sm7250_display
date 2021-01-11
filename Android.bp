@@ -1,4 +1,5 @@
 soong_namespace {
+    imports: ["vendor/qcom/opensource/commonsys-intf/display"],
 }
 
 display_go_defaults_sm7250 {
@@ -47,8 +48,8 @@ cc_library_headers {
         "gralloc",
         "libhistogram",
     ],
-    header_libs: ["libhardware_headers", "//vendor/qcom/sm7250:display_intf_headers", "debug_headers"],
-    export_header_lib_headers: ["libhardware_headers", "//vendor/qcom/sm7250:display_intf_headers", "debug_headers"],
+    header_libs: ["libhardware_headers", "display_intf_headers", "debug_headers"],
+    export_header_lib_headers: ["libhardware_headers", "display_intf_headers", "debug_headers"],
 }
 
 subdirs = [
